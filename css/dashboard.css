@@ -1,0 +1,39 @@
+.cateItem{
+    width: 22%;
+    padding-bottom:22% ;
+    border-radius:50%;
+    border:1px solid #CA9E2D;
+}
+.cateItem>h4{
+    margin-top:0.2rem;
+    margin-bottom:0;
+    font-size:0.7rem;
+    color: #ffffff;
+}
+.cateItem>p{
+    margin-bottom:0;
+    font-size:0.5rem;
+    color: #ffffff;
+}
+.headPart{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headPart img{
+    width: 25%;
+}
+.headPart>div{
+    font-size: 0.5rem;
+    color: #ffffff;
+    width: 65%;
+}
+.pieTitle{
+    width: 100%;
+    margin-left: 0.3rem;
+    font-size: 0.55rem;
+    padding-top: 0.4rem;
+    color:#ffffff
+}

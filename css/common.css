@@ -1,0 +1,170 @@
+@charset "UTF-8";
+html {
+  font-family: "microsoft yahei";
+  min-width: 1280px;
+  /* height:100%
+	 * overflow:hidden;*/
+  min-height: 100vh;
+  font-size: 26.66px;
+}
+
+/*@media only screen and (min-width: 960px) {
+	html {
+		font-size: 20px !important;
+	}
+}*/
+/*@media only screen and (min-width: 1024px) {
+	html {
+		font-size: 21.33px !important;
+	}
+}*/
+/*@media only screen and (min-width: 1200px) {
+	html {
+		font-size: 25px !important;
+	}
+}*/
+@media only screen and (min-width: 1280px) {
+  html {
+    font-size: 26.66px !important;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  html {
+    font-size: 27.0833px !important;
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  html {
+    font-size: 28.45px !important;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  html {
+    font-size: 29.1666px !important;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  html {
+    font-size: 30px !important;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  html {
+    font-size: 31.25px !important;
+  }
+}
+
+@media only screen and (min-width: 1536px) {
+  html {
+    font-size: 32px !important;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  html {
+    font-size: 33.3333px !important;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  html {
+    font-size: 35.4166px !important;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  html {
+    font-size: 37.5px !important;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  html {
+    font-size: 40px !important;
+  }
+}
+
+/*
+ * 
+宽1280px: (40px/1920px)*宽1280px=26.66px
+宽1366px: (40px/1920px)*宽1366px=28.45px
+宽1440px: (40px/1920px)*宽1440px=30px
+宽1536px: (40px/1920px)*宽1536px=32px
+宽1920px: (40px/1920px)*1920px=40px
+1920px的设计搞元素大小40px折合为1rem
+例如：subtitle为26px，那么：26px/40px*1rem=0.65rem;*/
+
+/* 滚动条 */
+.scroll-div {
+  /*height: calc(100% - 0.88rem);*/
+  overflow-y: auto;
+}
+
+.scroll-div::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 1px;
+  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 1px;
+}
+
+.scroll-div::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0);
+  background: rgba(255, 255, 255, 0);
+}
+
+.scroll-div::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0);
+}
+.flex {
+  display: flex;
+  flex-flow: nowrap row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header {
+  color: #fff;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+.header img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header .nav {
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top: 0.75rem;
+}
+
+.header .nav a {
+  display: block;
+  color: #fff;
+  width: 4.5rem;
+  height: 1.1rem;
+  line-height: 1.1rem;
+  background: url("../asset/images/index/tab.png") no-repeat center center/cover;
+  font-size: 0.45rem;
+  cursor: pointer;
+}
+
+.header .nav .active {
+  background-image: url("../asset/images/index/tabyes.png");
+}
+a {
+  color: #ffffff;
+  text-decoration: none;
+}

@@ -1,0 +1,266 @@
+@charset "UTF-8";
+html {
+  font-family: "microsoft yahei";
+  min-width: 1280px;
+  /* height:100%
+	 * overflow:hidden;*/
+  min-height: 100vh;
+  font-size: 26.66px;
+}
+
+/*@media only screen and (min-width: 960px) {
+	html {
+		font-size: 20px !important;
+	}
+}*/
+/*@media only screen and (min-width: 1024px) {
+	html {
+		font-size: 21.33px !important;
+	}
+}*/
+/*@media only screen and (min-width: 1200px) {
+	html {
+		font-size: 25px !important;
+	}
+}*/
+@media only screen and (min-width: 1280px) {
+  html {
+    font-size: 26.66px !important;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  html {
+    font-size: 27.0833px !important;
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  html {
+    font-size: 28.45px !important;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  html {
+    font-size: 29.1666px !important;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  html {
+    font-size: 30px !important;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  html {
+    font-size: 31.25px !important;
+  }
+}
+
+@media only screen and (min-width: 1536px) {
+  html {
+    font-size: 32px !important;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  html {
+    font-size: 33.3333px !important;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  html {
+    font-size: 35.4166px !important;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  html {
+    font-size: 37.5px !important;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  html {
+    font-size: 40px !important;
+  }
+}
+
+/*
+ * 
+宽1280px: (40px/1920px)*宽1280px=26.66px
+宽1366px: (40px/1920px)*宽1366px=28.45px
+宽1440px: (40px/1920px)*宽1440px=30px
+宽1536px: (40px/1920px)*宽1536px=32px
+宽1920px: (40px/1920px)*1920px=40px
+1920px的设计搞元素大小40px折合为1rem
+例如：subtitle为26px，那么：26px/40px*1rem=0.65rem;*/
+h3,
+img,
+li,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.hide {
+  display: none;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+  flex-flow: nowrap row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body {
+  height: 100%;
+  position: relative;
+  background: url("../asset/images/index/bg.png") no-repeat center center;
+  background-size: cover;
+  margin: 0 auto;
+  padding-bottom: 0.5rem;
+}
+
+.main {
+  color: #fff;
+  width: 100%;
+}
+
+.main span,
+.main div {
+  font-size: 0.35rem;
+}
+
+.header {
+  color: #fff;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+.header img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header .nav {
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top: 0.75rem;
+}
+
+.header .nav a {
+  width: 4.5rem;
+  height: 1.1rem;
+  line-height: 1.1rem;
+  background: url("../asset/images/index/tab.png") no-repeat center center/cover;
+  font-size: 0.45rem;
+  cursor: pointer;
+}
+
+.header .nav .active {
+  background-image: url("../asset/images/index/tabyes.png");
+}
+
+.main {
+  position: relative;
+  margin: 1.5rem auto 0;
+  width: 46rem;
+  height: 23.25rem;
+  text-align: center;
+  padding-top: 0.2rem;
+  background: url("../asset/images/index/mainbg.png") no-repeat center center/100%;
+}
+
+.main .title {
+  position: absolute;
+  top: 0;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.main .title ul {
+  width: 43.5rem;
+  height: 3.25rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  background: url("../asset/images/index/titlebg.png") no-repeat center/100%;
+  margin: 0 auto;
+  display: flex;
+  font-size: 0.5rem;
+  color: white;
+  list-style-type: none;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.main .title ul li p:first-child {
+  font-size: 0.65rem;
+  color: #00fff6;
+}
+
+.main .title ul li p:last-child {
+  margin-top: 0.2rem;
+}
+
+.main #drawing {
+  width: 45.125rem;
+  height: 22.625rem;
+  margin: 0.2rem auto 0;
+}
+
+.main .box {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  bottom: 1rem;
+  box-sizing: border-box;
+  width: 9.35rem;
+  height: 10rem;
+  padding: 0.5rem 1rem;
+  background: url("../asset/images/index/boxbg.png") no-repeat center center/100%;
+  text-align: left;
+  line-height: 1rem;
+  font-size: 0.5rem;
+}
+
+.main .box .tit {
+  justify-content: flex-start;
+}
+
+.main .box span {
+  font-size: 0.5rem;
+  margin-left: 0.1rem;
+}
+
+.map {
+  width: 100%;
+  height: 500px;
+}

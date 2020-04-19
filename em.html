@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>企业产出情况</title>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/em.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="fixedTitle"></div>
+        <a class="navleft flex" href="./index.html">
+            <img src="./emImgs/首页图标.png" alt="">
+            <span style="margin-left: 0.3rem;">首页</span>
+        </a>
+        <!-- <div class="header-right">
+            <img src="./emImgs/GPS.png" alt="">
+            <span>当前楼栋</span>
+            <span id="name"></span>
+        </div> -->
+        <div class="right-tabs">
+            <div class="nav flex">
+                <a class="active">企业产出情况</a>
+                <a class="buildingVacancy">楼栋空置情况</a>
+            </div>
+        </div>
+        <div class="title">
+            <ul>
+                <li>
+                    <div class="li-left">
+                        <img src="./emImgs/入驻企业数.png" alt="">
+                    </div>
+                    <div class="li-r">
+                        <div class="li-r-t">
+                            <span class="li-span1">17</span>
+                            <span class="li-span2">同比+24.7%</span>
+                            <img src="./emImgs/增幅箭头.png" alt="">
+                        </div>
+                        <div class="li-r-b">入驻企业数</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="li-left">
+                        <img src="./emImgs/入住率.png" alt="">
+                    </div>
+                    <div class="li-r">
+                        <div class="li-r-t">
+                            <span class="li-span1">50%</span>
+                            <span class="li-span2">同比+2.7%</span>
+                            <img src="./emImgs/增幅箭头.png" alt="">
+                        </div>
+                        <div class="li-r-b">入驻率</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="li-left">
+                        <img src="./emImgs/重点企业数.png" alt="">
+                    </div>
+                    <div class="li-r">
+                        <div class="li-r-t">
+                            <span class="li-span1">3</span>
+                            <span class="li-span2">同比+4.7%</span>
+                            <img src="./emImgs/增幅箭头.png" alt="">
+                        </div>
+                        <div class="li-r-b">重点企业数</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="li-left">
+                        <img src="./emImgs/纳税企业数.png" alt="">
+                    </div>
+                    <div class="li-r">
+                        <div class="li-r-t">
+                            <span class="li-span1">87</span>
+                            <span class="li-span2">同比-22.1%</span>
+                            <img src="./emImgs/下跌箭头.png" alt="">
+                        </div>
+                        <div class="li-r-b">纳税企业数</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="li-left">
+                        <img src="./emImgs/本年累计.png" alt="">
+                    </div>
+                    <div class="li-r">
+                        <div class="li-r-t">
+                            <span class="li-span1">25.35</span>
+                            <span class="li-span2">同比-2.1%</span>
+                            <img src="./emImgs/下跌箭头.png" alt="">
+                        </div>
+                        <div class="li-r-b">本年累计税收金额(亿元)</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="charts">
+            <!-- 1 -->
+            <div class="chart">
+                <div class="titleTabs">
+                    <div style="font-size:0.5rem;font-family:PingFang SC;font-weight:bold;color:rgba(222,241,255,1);">
+                        企业人均产能排行</div>
+                    <div style="font-size:0.4rem;font-family:PingFang SC;font-weight:500;color:rgba(255,255,255,1);">
+                        <span class="active qycnph">企业</span>
+                        <span class="qycnph">产业分类</span>
+                    </div>
+                </div>
+                <div class="unit">单位：万元/人</div>
+                <!-- 企业 -->
+                <div id="peopleQyBarDivs" class="popbarDivs1">
+                    <script id="peopleQyBarDiv" type="text/html">
+                        {{each peopleQyData item i}}
+                            <div class="barDiv">
+                                <div class="left-label pop-left-label">{{item.label}}</div>
+                                <div class="progressBar">
+                                <div style="width:{{item.bar}}" id="bar"></div>
+                                </div>
+                                <div class="right-num">{{item.num}}</div>
+                            </div>
+                        {{/each}}
+                    </script>
+                </div>
+                <!-- 产业分类 -->
+                <div id="peoplecyflBarDivs" class="popbarDivs2 hide">
+                    <script id="peoplecyflBarDiv" type="text/html">
+                        {{each peoplecyflData item i}}
+                            <div class="barDiv">
+                                <div class="left-label pop-left-label">{{item.label}}</div>
+                                <div class="progressBar">
+                                <div style="width:{{item.bar}}" id="bar"></div>
+                                </div>
+                                <div class="right-num">{{item.num}}</div>
+                            </div>
+                        {{/each}}
+                    </script>
+                </div>
+            </div>
+            <!-- 2 -->
+            <div class="chart">
+                <div class="titleTabs">
+                    <div style="font-size:0.5rem;font-family:PingFang SC;font-weight:bold;color:rgba(222,241,255,1);">
+                        企业平效排行</div>
+                    <div style="font-size:0.4rem;font-family:PingFang SC;font-weight:500;color:rgba(255,255,255,1);">
+                        <span class="active qypxph">企业</span>
+                        <span class="qypxph">产业分类</span>
+                    </div>
+                </div>
+                <div class="unit">单位：万元/平方米</div>
+                <!-- 企业 -->
+                <div id="qyBarDivs" class="barDivs1">
+                    <script id="qyBarDiv" type="text/html">
+                        {{each qyData item i}}
+                            <div class="barDiv">
+                                <div class="left-label">{{item.label}}</div>
+                                <div class="progressBar">
+                                <div style="width:{{item.bar}}" id="bar"></div>
+                                </div>
+                                <div class="right-num">{{item.num}}</div>
+                            </div>
+                        {{/each}}
+                    </script>
+                </div>
+                <!-- 产业分类 -->
+                <div id="cyflBarDivs" class="barDivs2 hide">
+                    <script id="cyflBarDiv" type="text/html">
+                        {{each cyflData item i}}
+                            <div class="barDiv">
+                                <div class="left-label">{{item.label}}</div>
+                                <div class="progressBar">
+                                <div style="width:{{item.bar}}" id="bar"></div>
+                                </div>
+                                <div class="right-num">{{item.num}}</div>
+                            </div>
+                        {{/each}}
+                    </script>
+                </div>
+            </div>
+            <!-- 3 -->
+            <div class="chart scroll-chart">
+                <p>企业纳税排行</p>
+                <ul id="template-box">
+                    <script id="tableData" type="text/html">
+                        <li style="font-size:0.45rem;
+                        font-family:PingFang SC;
+                        font-weight:bold;
+                        color:rgba(1,255,252,1);">
+                            <span style="display:inline-block">排名</span>
+                            <span>企业</span>
+                            <span>年累计纳税金额(万元)</span>
+                            <span>同比</span>
+                        </li>
+                        <div class="scroll-div">
+                            {{each data item i}}
+                                <li>
+                                    <span>
+                                        {{if item.num != ""}}
+                                            <span style="flex: initial;justify-content: center;width: 27px;height: 34px;text-align: center;">{{item.num}}</span>
+                                            <img style="margin-left:1rem;" src={{item.url}} alt="">
+                                        {{/if}}
+                                        {{if item.num == ""}}
+                                            <img src={{item.num2}} alt="">           
+                                            <img style="margin-left:1rem;" src={{item.url}} alt="">                          
+                                        {{/if}}
+                                    </span>
+                                    <span>{{item.name || '-'}}</span>
+                                    <span>{{item.Amount || '-'}}</span>
+                                    <span>{{item.YoY || '-'}}<img style="margin-left:0.2rem;" src="./emImgs/增幅箭头.png" alt=""></span>
+                                </li>
+                            {{/each}}
+                        </div>
+                    </script>
+                </ul>
+            </div>
+            <!-- 4 -->
+            <div class="chart">
+                <div class="div-top">
+                    <div style="font-size:0.5rem;font-family:PingFang SC;font-weight:bold;color:rgba(222,241,255,1);">
+                        企业性质分布情况</div>
+                    <div style="font-size:0.4rem;font-family:PingFang SC;font-weight:500;color:rgba(222,241,255,1);">
+                        单位：家</div>
+                </div>
+                <div id="chart3"></div>
+            </div>
+            <!-- 5 -->
+            <div class="chart">
+                <div class="titleTabs">
+                    <div style="font-size:0.5rem;font-family:PingFang SC;font-weight:bold;color:rgba(222,241,255,1);">
+                        企业规模分布</div>
+                    <div style="font-size:0.4rem;font-family:PingFang SC;font-weight:500;color:rgba(255,255,255,1);">
+                        <span class="active qygm">人员规模</span>
+                        <span class="qygm">营收规模</span>
+                    </div>
+                </div>
+                <div class="rygmDiv">
+                    <div class="boxs">
+                        <div>
+                            <div class="box-top">20人以下</div>
+                            <div class="box-b"><span>438</span><span>家</span></div>
+                        </div>
+                        <div>
+                            <div class="box-top">20-50人</div>
+                            <div class="box-b"><span>22</span><span>家</span></div>
+                        </div>
+                        <div>
+                            <div class="box-top">50-100人</div>
+                            <div class="box-b"><span>19</span><span>家</span></div>
+                        </div>
+                    </div>
+                    <div class="boxs">
+                        <div>
+                            <div class="box-top">100-500人</div>
+                            <div class="box-b"><span>4</span><span>家</span></div>
+                        </div>
+                        <div>
+                            <div class="box-top">500人以上</div>
+                            <div class="box-b"><span>1</span><span>家</span></div>
+                        </div>
+                        <div>
+                            <div class="box-top">其他</div>
+                            <div class="box-b"><span>49</span><span>家</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ysgmDiv hide">
+                    <div class="boxs2">
+                        <div>
+                            <div class="box-top">50万以下</div>
+                            <div class="box-b"><span>120</span><span>家</span></div>
+                        </div>
+                        <div>
+                            <div class="box-top">50万-500万</div>
+                            <div class="box-b"><span>27</span><span>家</span></div>
+                        </div>
+                    </div>
+                    <div class="boxs2">
+                        <div>
+                            <div class="box-top">500万-3亿</div>
+                            <div class="box-b"><span>29</span><span>家</span></div>
+                        </div>
+                        <div>
+                            <div class="box-top">3亿以上</div>
+                            <div class="box-b"><span>10</span><span>家</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 6 -->
+            <div class="chart">
+                <div class="div-top">
+                    <div style="font-size:0.5rem;font-family:PingFang SC;font-weight:bold;color:rgba(222,241,255,1);">
+                        企业复工情况统计</div>
+                    <div style="font-size:0.4rem;font-family:PingFang SC;font-weight:500;color:rgba(222,241,255,1);">
+                        单位：人</div>
+                </div>
+                <div id="chart5"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/building.js"></script>
+    <script src="./emOptions/option2.js"></script>
+    <script src="./emOptions/option3.js"></script>
+    <script src="./emOptions/option4.js"></script>
+    <script src="./emOptions/option5.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/echarts.min.js"></script>
+    <script type="text/javascript" src="js/template-web.js"></script>
+    <script src="./js/em.js"></script>
+    <script>
+        var index =
+            decodeURIComponent(
+                // eslint-disable-next-line no-sparse-arrays
+                (new RegExp("[?|&]key=" + "([^&;]+?)(&|#|;|$)").exec(location.href) || [, ""])[1].replace(/\+/g, "%20")) || null
+        var name = buildingData[index].name
+        console.log(name);
+        $("#name").html(name)
+    </script>
+</body>
+
+</html>

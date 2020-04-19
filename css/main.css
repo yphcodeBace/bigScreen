@@ -1,0 +1,523 @@
+@charset "UTF-8";
+html {
+  font-family: "microsoft yahei";
+  min-width: 1280px;
+  /* height:100%
+	 * overflow:hidden;*/
+  min-height: 100vh;
+  font-size: 26.66px;
+}
+
+/*@media only screen and (min-width: 960px) {
+	html {
+		font-size: 20px !important;
+	}
+}*/
+/*@media only screen and (min-width: 1024px) {
+	html {
+		font-size: 21.33px !important;
+	}
+}*/
+/*@media only screen and (min-width: 1200px) {
+	html {
+		font-size: 25px !important;
+	}
+}*/
+@media only screen and (min-width: 1280px) {
+  html {
+    font-size: 26.66px !important;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  html {
+    font-size: 27.0833px !important;
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  html {
+    font-size: 28.45px !important;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  html {
+    font-size: 29.1666px !important;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  html {
+    font-size: 30px !important;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  html {
+    font-size: 31.25px !important;
+  }
+}
+
+@media only screen and (min-width: 1536px) {
+  html {
+    font-size: 32px !important;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  html {
+    font-size: 33.3333px !important;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  html {
+    font-size: 35.4166px !important;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  html {
+    font-size: 37.5px !important;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  html {
+    font-size: 40px !important;
+  }
+}
+
+/*
+ * 
+宽1280px: (40px/1920px)*宽1280px=26.66px
+宽1366px: (40px/1920px)*宽1366px=28.45px
+宽1440px: (40px/1920px)*宽1440px=30px
+宽1536px: (40px/1920px)*宽1536px=32px
+宽1920px: (40px/1920px)*1920px=40px
+1920px的设计搞元素大小40px折合为1rem
+例如：subtitle为26px，那么：26px/40px*1rem=0.65rem;*/
+h3,
+img,
+li,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.hide {
+  display: none;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+body {
+  height: 100%;
+  position: relative;
+  background: url(../img/bg.png) no-repeat center center;
+  background-size: cover;
+  margin: 0 auto;
+  padding-bottom: 0.5rem;
+}
+
+img {
+  display: block;
+}
+
+.header img {
+  width: 40.325rem;
+  margin: 0 auto;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.main {
+  color: #fff;
+  width: 100%;
+}
+
+.main span,
+.main div {
+  font-size: 0.35rem;
+}
+
+.flex, .left,
+.right {
+  display: flex;
+  flex-flow: nowrap row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-around {
+  justify-content: space-around;
+}
+
+.main-color {
+  color: #41c4f7 !important;
+}
+
+.main-bg {
+  background: rgba(44, 169, 221, 0.18);
+}
+
+.border-left, .bottom .box6 .sort .block .flex, .bottom .box6 .sort .block .left, .bottom .box6 .sort .block
+.right {
+  border-left: 0.01rem solid rgba(65, 196, 247, 0.9);
+}
+
+.w20 {
+  width: 20%;
+}
+
+.w25 {
+  width: 25rem;
+}
+
+.top {
+  width: 100%;
+}
+
+.left,
+.right {
+  flex-flow: nowrap column;
+  justify-content: flex-start;
+  width: 12.5rem;
+  margin: 0 0.5rem;
+}
+
+.box {
+  width: 100%;
+  height: 7.875rem;
+  text-align: center;
+  background: url(../img/boxbg.png) no-repeat center center/cover;
+  margin-bottom: 0.2rem;
+}
+
+.box .boxcaption {
+  width: 100%;
+  height: 1rem;
+  padding-top: 0.05rem;
+  line-height: 1rem;
+  font-size: 0.45rem;
+  color: #ffffff;
+}
+
+.box .swiper-container {
+  width: 100%;
+  height: 100% !important;
+}
+
+.box .cont {
+  height: 6.2rem;
+  margin: 0 0.2rem;
+}
+
+.box .cont .sort {
+  margin: 0 0.2rem;
+  height: 100%;
+  /*overflow-y: auto;*/
+}
+
+.box .cont .sort > div {
+  height: 0.72rem;
+  line-height: 0.7rem;
+}
+
+.box .cont .border-left, .box .cont .bottom .box6 .sort .block .flex, .bottom .box6 .sort .block .box .cont .flex, .box .cont .bottom .box6 .sort .block .left, .bottom .box6 .sort .block .box .cont .left, .box .cont .bottom .box6 .sort .block
+.right, .bottom .box6 .sort .block .box .cont
+.right {
+  border-left: 0.01rem solid rgba(65, 196, 247, 0.9);
+}
+
+.left .box1 span,
+.right .box1 span {
+  width: 20%;
+}
+
+.left .box2 .sort .row > div,
+.right .box2 .sort .row > div {
+  width: 22%;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.left .box2 .sort .row > div:first-child,
+.right .box2 .sort .row > div:first-child {
+  width: 15%;
+}
+
+.left .box2 .sort2 .row,
+.right .box2 .sort2 .row {
+  height: auto !important;
+  margin-bottom: 0.1rem;
+}
+
+.left .box2 .sort2 .row > div,
+.right .box2 .sort2 .row > div {
+  width: 33% !important;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.left .box2 .sort2 .block,
+.right .box2 .sort2 .block {
+  height: 50% !important;
+  min-height: 2.5rem;
+  margin-bottom: 0.1rem;
+}
+
+.left .box2 .sort2 .red,
+.right .box2 .sort2 .red {
+  color: #fe0000;
+}
+
+.left .box3 .sort .row,
+.right .box3 .sort .row {
+  height: auto !important;
+  margin: 0.2rem 0;
+  text-align: left;
+}
+
+.left .box3 .sort .row > div,
+.right .box3 .sort .row > div {
+  width: 25%;
+  text-align: left;
+}
+
+.left .box3 .sort .row > div:last-child,
+.right .box3 .sort .row > div:last-child {
+  width: 50%;
+  line-height: 0.5rem;
+}
+
+.left .box4 span,
+.right .box4 span {
+  width: 20%;
+}
+
+.middle {
+  width: 100%;
+  flex: 1;
+}
+
+.middle .mid-top {
+  width: 100%;
+  margin-top: 0.3rem;
+}
+
+.middle .mid-top .item .circle {
+  width: 2.65rem;
+  height: 2.65rem;
+  line-height: 2.65rem;
+  text-align: center;
+  font-size: 0.45rem;
+  background: url(../img/circlebg.png) no-repeat center center/100%;
+}
+
+.middle .mid-top .item .txt {
+  text-align: center;
+  font-size: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.middle .mid-bottom {
+  width: 100%;
+  height: 12rem;
+}
+
+.bottom {
+  margin: 0 0.5rem;
+  align-items: flex-start;
+}
+
+.bottom .box {
+  width: 15.3rem;
+  background: url(../img/boxbgbig.png) no-repeat 0/15.3rem 7.875rem;
+}
+
+.bottom .box .cont {
+  overflow: hidden;
+}
+
+.bottom .box .cont .sort {
+  height: 6.3rem;
+}
+
+.bottom .box5 .time {
+  padding-right: 1rem;
+  margin: 0.2rem 0 0.2rem 0.7rem !important;
+  font-weight: bolder;
+  text-align: left;
+}
+
+.bottom .box5 .sort1 > div {
+  height: auto !important;
+  margin: 0.1rem 0;
+}
+
+.bottom .box5 .sort1 > div span {
+  width: 33%;
+}
+
+.bottom .box5 .sort2 .row > div {
+  width: 20%;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.bottom .box5 .sort2 .row > div:first-child {
+  width: 20%;
+}
+
+.bottom .box6 .tit {
+  text-align: left;
+  margin: 0.2rem 0 0.2rem 0.7rem;
+  font-weight: bolder;
+}
+
+.bottom .box6 .sort {
+  align-items: flex-start;
+}
+
+.bottom .box6 .sort .block {
+  width: 32%;
+  padding-left: 1%;
+}
+
+.bottom .box6 .sort .block:first-child {
+  padding-left: 0;
+}
+
+.bottom .box6 .sort .block div {
+  flex: 1;
+}
+
+.bottom .box6 .sort .block:first-child .flex, .bottom .box6 .sort .block:first-child .left, .bottom .box6 .sort .block:first-child
+.right {
+  border: 0;
+}
+
+.bottom .box6 .sort2 .row > div {
+  width: 33%;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.bottom .box7 .cont {
+  margin: 0;
+}
+
+.bottom .box7 .w5 {
+  width: 5%;
+}
+
+.bottom .box7 .w10 {
+  width: 10%;
+}
+
+.bottom .box7 .w13 {
+  width: 13%;
+}
+
+.bottom .box7 .w16 {
+  width: 16%;
+}
+
+.bottom .box7 .w20 {
+  width: 20%;
+}
+
+.bottom .box7 .w25 {
+  width: 27%;
+}
+
+.bottom .box7 .w30 {
+  width: 30%;
+}
+
+.bottom .box7 .txt .flex div, .bottom .box7 .txt .left div, .bottom .box7 .txt
+.right div {
+  flex: 1;
+  text-align: center;
+}
+
+body .main .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.3);
+  width: 0.475rem;
+  height: 0.1rem;
+  border-radius: 0.05rem;
+  opacity: 1;
+}
+
+body .main .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: white;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: var(--swiper-pagination-color, var(--swiper-theme-color));
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 0.2rem !important;
+}
+
+.caption {
+  width: 100%;
+  font-size: 0.55rem;
+  color: #ffffff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.smart-scroll {
+  /*height: calc(100% - 0.88rem);*/
+  overflow-y: auto;
+}
+
+.smart-scroll::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 1px;
+  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 1px;
+}
+
+.smart-scroll::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0);
+  background: rgba(255, 255, 255, 0);
+}
+
+.smart-scroll::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0);
+}

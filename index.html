@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>工程信息化平台大数据</title>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <script src="./js/building.js"></script>
+    <script type="text/javascript" src="js/template-web.js"></script>
+    <script src="./asset/js-svg/jquery-3.1.1.min.js"></script>
+    <script src="./asset/js-svg/svg.js"></script>
+    <script src="./asset/js-svg/svg.draw.js"></script>
+    <script src="./asset/js-svg/svg-pan-zoom.js"></script>
+    <script src="./asset/js-svg/svg_path_data.js"></script>
+    <script src="./asset/js-svg/main.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <img src="./asset/images/index/header.png" />
+        <div class="nav flex">
+            <a href="./index.html" class="active">企业管理看板</a>
+            <a href="./taxKanban.html">企业税收看板</a>
+            <a href="./businessCase.html">经营情况看板</a>
+        </div>
+    </div>
+    <div class="main">
+        <div id="drawing">
+        </div>
+        <div class="title">
+            <ul>
+                <li>
+                    <p>537</p>
+                    <p>入驻企业数</p>
+                </li>
+                <li>
+                    <p>50%</p>
+                    <p>入驻率</p>
+                </li>
+                <li>
+                    <p>16</p>
+                    <p>重点企业数</p>
+                </li>
+                <li>
+                    <p>87</p>
+                    <p>纳税企业数</p>
+                </li>
+                <li>
+                    <p>25.35</p>
+                    <p>本年累积税收金额（亿元）</p>
+                </li>
+                <li>
+                    <p>700</p>
+                    <p>日新增复工人数</p>
+                </li>
+                <li>
+                    <p>5130</p>
+                    <p>累积复工人数</p>
+                </li>
+                <li>
+                    <p>73</p>
+                    <p>重点地区返沪员工数</p>
+                </li>
+            </ul>
+        </div>
+        <div class="box L1A">
+            <!-- <div class="flex tit">
+                <img src="./asset/images/index/building.png" alt="">
+                <span>L1A</span>
+            </div>
+            <p>建筑面积(㎡）:<span>60000m</span></p>
+            <p>办公面积(㎡）<span>60000m</span></p>
+            <p>已使用面积(㎡）<span>60000m</span></p>
+            <p>入住率<span>60000m</span></p>
+            <p>重点企业数<span>60000m</span></p>
+            <p>入驻员工数<span>60000m</span></p>
+            <p>复工员工数<span>60000m</span></p>
+            <p>税收金额（万元）<span>60000m</span></p> -->
+
+        </div>
+        <script id="boxData" type="text/html">
+           <a style="color:#6BF6FF;" class="flex tit" href="./em.html">
+                <img src="./asset/images/index/building.png" alt="">
+                <span style="font-size:0.6rem;">{{title}}</span>
+                <span>{{name}}</span>
+            </a>
+            <p>建筑面积(㎡）:<span>{{data1}}</span></p>
+            <p>办公面积(㎡）<span>{{data2}}</span></p>
+            <p>已使用面积(㎡）<span>{{data3}}</span></p>
+            <p>入住率(%)<span>{{data4}}</span></p>
+            <p>重点企业数(个)<span>{{data5}}</span></p>
+            <p>入驻员工数(人)<span>{{data6}}</span></p>
+            <p>复工员工数(人)<span>{{data7}}</span></p>
+            <p>税收金额（万元）<span>{{data8}}</span></p>
+        </script>
+    </div>
+
+</body>
+
+</html>

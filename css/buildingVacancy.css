@@ -1,0 +1,355 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: url(../asset/images/index/bg.png) no-repeat center center;
+    background-size: cover;
+}
+.wrap {
+    padding: 0 1rem;
+}
+.fixedTitle {
+    /* border: 1px solid red; */
+    position: relative;
+    height: 2rem;
+    background: url(../emImgs/title2.png) no-repeat center center;
+    background-size: cover;
+    margin-bottom: 0.7rem;
+}
+.navleft {
+    display: flex;
+    align-items: center;
+    font-size: 0.6rem;
+    font-family: "PingFang SC";
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    position: absolute;
+    top: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    /* border: 1px solid red; */
+}
+.navleft p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.75rem;
+}
+/* 标题tab切换 */
+.titleTabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.titleTabs span {
+    margin-right: 0.4rem;
+    cursor: pointer;
+}
+.active{
+    color:#18EBF3;
+    font-size: 0.45rem;
+}
+
+/* 右侧tab切换 */
+.right-tabs{
+    /* border: 1px solid red; */
+    position: absolute;
+    right: 1rem;
+    top: 0;
+}
+.right-tabs .nav {
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 0.75rem;
+}
+
+.right-tabs .nav a {
+    display: block;
+    color: #fff;
+    width: 4.5rem;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    background: url("../asset/images/index/tab.png") no-repeat center center/cover;
+    font-size: 0.45rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.right-tabs .nav .active {
+    background-image: url("../asset/images/index/tabyes.png");
+}
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* 内容 */
+.content{
+    /* border: 1px solid red; */
+    height: 23.5rem;
+    display: flex;
+    flex-direction: row;
+}
+.content-left{
+    flex: 1;
+    margin-right: 2%;
+    /* border: 1px solid black; */
+    background: url(../asset/images/buildingVacancy/left.png) no-repeat center center;
+    background-size: 100% 100%;
+    /* display: flex; */
+}
+.content-right{
+    flex: 1.4;
+    /* border: 1px solid green; */
+}
+.content-l-t{
+    /* border: 1px solid red; */
+    font-size:0.65rem;
+    font-family:PingFang SC;
+    font-weight:bold;
+    color:rgba(1,255,252,1);
+    /* text-align: center; */
+    margin-top: 1.425rem;
+    padding-left: 4rem;
+}
+.content-l-b{
+    /* border: 1px solid green; */
+    height: 20.5rem;
+    display: flex;
+    flex-direction: row;
+}
+.building{
+    margin: 1rem;
+    /* border: 1px solid red; */
+    height: 18.5rem;
+    flex: 4.5;
+    /* background: url(../asset/images/buildingVacancy/building.png) no-repeat center center; */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../asset/images/buildingVacancy/building.png);
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+}
+.building>div{
+    flex: 1;
+    /* border: 1px solid green; */
+    cursor: pointer;
+}
+.floor{
+    /* border: 1px solid green; */
+    height: 18.5rem;
+    flex: 1;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+}
+.floor>div{
+    /* border: 1px solid red; */
+    flex: 1;
+    font-size:0.45rem;
+    font-family:PingFang SC;
+    font-weight:bold;
+    color:rgba(254,255,255,1);
+    display: flex;
+    align-items: center;
+}
+/* 弹框 */
+#moreCharts {
+    padding: 25px;
+    /* border: 3px solid #e70a0a; */
+    border-radius: 6px;
+    display: none;
+}
+.moreContent {
+    background-color: rgb(7, 41, 75, 0.9);
+    padding: 30px 0;
+    border-radius: 20px;
+    border: 2px dashed #145f96;
+}
+.swiper_title {
+    font-size: 0.55rem;
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    top: -0.3rem;
+}
+.swiper_subTitle {
+    font-size: 0.4rem;
+    color: #fff;
+    padding-top: 20px;
+    padding-left: 40px;
+}
+.swiper_more {
+    padding: 10px 0;
+    background: url("../img/img_new/modal_bg_content.png") no-repeat center top;
+    background-size: contain;
+    height: 350px;
+}
+#chartPie_type,
+#chartPie_mode {
+    margin-top: -6%;
+}
+.scroll-div {
+    height: 82%;
+    overflow: hidden;
+}
+.swiper_content{
+    height: 300px;
+    /* border: 1px solid red; */
+    margin: 0 1rem;
+}
+.lenged-div{
+    /* border: 1px solid red; */
+    height: 30px;
+    background: url(../asset/images/buildingVacancy/lenged.png) no-repeat top right;
+}
+.shoes-div{
+    /* border: 1px solid green; */
+    margin: 0 2rem;
+    height: 260px;
+    background: url(../asset/images/buildingVacancy/shoes.png) no-repeat center center;
+    background-size: 100% 100%;
+}
+
+
+/* 郭艳秋样式 */
+.user_case,.butler_box,.box_bot{
+    padding: 2%;
+    width: 50%;
+    height: 10.4rem;
+    background: url('../asset/images/buildingVacancy/top-center.png') no-repeat;
+    background-size: 100% 100%;
+    float: left;
+}
+.butler_box{
+    width: 40%;
+    background: url('../asset/images/buildingVacancy/top-r.png') no-repeat;
+    background-size: 100% 100%;
+    margin-left: 2%;
+}
+.box_bot{
+    width: auto;
+    background: url('../asset/images/buildingVacancy/right-b.png') no-repeat;
+    background-size: 100% 100%;
+    margin-top: 2%;
+    float: none;
+    clear: both;
+}
+.box_top{
+    overflow: hidden;
+    clear: both;
+}
+.box_title {
+    color: #fff;
+    padding-bottom: 0.5rem;
+    overflow: hidden;
+}
+.box_title > h1 {
+    font-size: 0.525rem;
+    font-weight: normal;
+    float: left;
+    margin: 0;
+}
+.boxs{
+    display: flex;
+    flex-direction: row;
+    margin: 0 -0.3rem 1rem -0.3rem;
+}
+.boxs > div {
+    text-align: center;
+    height: 2.2rem;
+    flex: 1 1 0%;
+    background: url(../emImgs/企业人员分布框框.png) center center / 100% 100% no-repeat;
+    margin: 0 0.4rem;
+}
+.box-top {
+    font-size: 0.45rem;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: rgba(222, 241, 255, 1);
+    margin-top: -0.25rem;
+    margin-bottom: 0.7rem;
+}
+.box-b {
+    font-size: 0.4rem;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: rgba(222, 241, 255, 1);
+}
+.box-b>span{
+    font-size: 0.7rem;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: rgba(0, 255, 234, 1);
+}
+.tabItems{
+    display: none;
+    padding-top: 0.5rem;
+}
+.case_info{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    clear: both;
+}
+.case_info>li{
+    font-size: 0.45rem;
+    color: #fff;
+    padding: 0.6rem 0;
+    width: 50%;
+    float: left;
+    list-style: none;
+    position: relative;
+}
+
+.case_info>li::before{
+    content: "";
+    width: 0.175rem;
+    height: 0.175rem;
+    background-color: #3EDEF6;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.4rem;
+}
+.case_info>li>span{
+    color: #FFF100;
+}
+.butler_photo{
+    width: 6rem;
+    height: 6rem;
+    margin: 0 auto 0.5rem auto;
+    overflow: hidden;
+}
+.butler_photo>img{
+    width: 100%;
+    display: block;
+}
+.butler_info{
+    width: 6rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.butler_info>p{
+    font-size: 0.45rem;
+    color: #fff;
+    line-height: 0.3rem 0;
+    position: relative;
+}
+.butler_info>p::before{
+    content: "";
+    width: 0.45rem;
+    height: 0.5rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.4rem;
+}
+.butler_info>p:first-child::before{
+    background: url('../asset/images/buildingVacancy/name.png') no-repeat;
+    background-size: contain;
+}
+.butler_info>p:last-child::before{
+    background: url('../asset/images/buildingVacancy/phone.png') no-repeat;
+    background-size: contain;
+}

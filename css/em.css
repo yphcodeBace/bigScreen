@@ -1,0 +1,369 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: url(../asset/images/index/bg.png) no-repeat center center;
+    background-size: cover;
+}
+.wrap {
+    /* border: 1px solid red; */
+    padding: 0 1rem;
+    /* overflow: hidden; */
+}
+.fixedTitle {
+    /* border: 1px solid red; */
+    position: relative;
+    height: 2rem;
+    background: url(../emImgs/title2.png) no-repeat center center;
+    background-size: cover;
+    margin-bottom: 0.7rem;
+}
+.navleft {
+    display: flex;
+    align-items: center;
+    font-size: 0.6rem;
+    font-family: "PingFang SC";
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    position: absolute;
+    top: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    /* border: 1px solid red; */
+}
+.navleft p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.75rem;
+}
+.header p:nth-child(1) {
+    float: left;
+    cursor: pointer;
+}
+.header-right{
+    border: 1px solid red;   
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+}
+.header-right > span{
+    font-size:20px;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:rgba(255,255,255,1);
+    margin-left: 0.5rem;
+}
+.title {
+    /* border: 1px solid red; */
+}
+.title ul {
+    display: flex;
+    flex-direction: row;
+    font-size: 0.5rem;
+    color: black;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    /* text-align: center; */
+    /* margin-top: 1rem; */
+}
+.title ul li {
+    /* border: 1px solid #8DDDFF; */
+    background: url(../emImgs/titBox.png) no-repeat center center;
+    background-size: 100% 100%;
+    flex: 1;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    margin-right: 0.5rem;
+}
+.title ul li:last-child {
+    margin-right: 0;
+}
+.li-left {
+    flex: 1;
+    text-align: center;
+    padding-left: 0.3rem;
+}
+.li-r {
+    flex: 3.5;
+}
+.li-r-t {
+    /* margin-top: -0.2rem; */
+}
+.li-r-b {
+    font-size: 0.55rem;
+    font-family: "Microsoft YaHei";
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 0.2rem;
+}
+.li-span1 {
+    font-size: 0.75rem;
+    font-family: Microsoft YaHei;
+    font-weight: bold;
+    color: rgba(31, 241, 255, 1);
+}
+.li-span2 {
+    font: size 0.35rem;
+    margin-left: 0.6rem;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+}
+
+.charts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.chart {
+    /* width: 30%; */
+    /* flex-grow: 1; */
+    border: 1px solid transparent;
+    height: 11rem;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+.chart:nth-child(3n-2) {
+    width: 28%;
+    background: url(../emImgs/左边框.png) no-repeat center center;
+    background-size: 100% 100%;
+}
+.chart:nth-child(3n-1) {
+    margin: 0.5rem 1rem;
+    width: 31.5%;
+    background: url(../emImgs/中边框.png) no-repeat center center;
+    background-size: 100% 100%;
+}
+.chart:nth-child(3n-3) {
+    width: 36%;
+    background: url(../emImgs/右边框.png) no-repeat center center;
+    background-size: 100% 100%;
+}
+.chart p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.5rem;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: rgba(222, 241, 255, 1);
+}
+.chart ul {
+    margin: 0;
+    padding: 0.5rem 0;
+    list-style-type: none;
+    font-size: 0.5rem;
+}
+.chart ul li {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.5rem;
+    font-size: 0.45rem;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: rgba(254, 255, 255, 1);
+}
+.chart ul li span {
+    flex: 1;
+    text-align: center;
+}
+.chart ul li span:nth-child(1) {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+.scroll-div {
+    /* border: 1px solid red; */
+    height: 6.8rem;
+    overflow: hidden;
+}
+
+.div-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#chart1,
+#chart3,
+#chart5 {
+    height: 9.5rem;
+}
+/* 进度条 */
+.progressBar {
+    width: 60%;
+    height: 0.3rem;
+    background: #04417c;
+    border-radius: 6px;
+    margin: 0 0.6rem 0 0.4rem;
+}
+#bar {
+    width: 85.7%;
+    height: 0.3rem;
+    background: linear-gradient(90deg, rgba(39, 113, 234, 1), rgba(2, 208, 255, 1));
+    border-radius: 6px;
+}
+.barDiv {
+    /* margin: 0.8rem 0; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+.barDiv-title {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    /* margin-bottom: 0.2rem; */
+}
+.left-label {
+    font-size: 0.45rem;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: rgba(222, 241, 255, 1);
+    width: 14%;
+    text-align: right;
+}
+.pop-left-label{
+    width: 17%;
+}
+.right-num {
+    font-size: 0.5rem;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: rgba(43, 250, 255, 1);
+    width: 20%;
+}
+.boxs {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    margin: 1.7rem 0;
+}
+.boxs > div {
+    flex: 1;
+    /* border: 1px solid red; */
+    text-align: center;
+    height: 2.2rem;
+    background: url(../emImgs/企业人员分布框框.png) no-repeat center center;
+    background-size: 100% 100%;
+}
+.boxs > div:nth-child(2) {
+    margin: 0 0.5rem;
+}
+.boxs2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1.7rem 0;
+}
+.boxs2 > div {
+    width: 3.825rem;
+    /* flex: 1; */
+    /* border: 1px solid red; */
+    text-align: center;
+    height: 2.2rem;
+    background: url(../emImgs/企业人员分布框框.png) no-repeat center center;
+    background-size: 100% 100%;
+}
+.box-b {
+    font-size: 0.4rem;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: rgba(222, 241, 255, 1);
+}
+.box-b span:first-child {
+    font-size: 0.7rem;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: rgba(0, 255, 234, 1);
+}
+.box-top {
+    font-size: 0.45rem;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: rgba(222, 241, 255, 1);
+    margin-top: -0.25rem;
+    margin-bottom: 0.5rem;
+}
+/* 标题tab切换 */
+.titleTabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.titleTabs span {
+    margin-right: 0.4rem;
+    cursor: pointer;
+}
+.active{
+    color:#18EBF3;
+    font-size: 0.45rem;
+}
+.rygmDiv{
+    /* border: 1px solid red; */
+}
+.ysgmDiv{
+    /* border: 1px solid green; */
+}
+.hide{
+    display: none;
+}
+/* 企业平效果排行 */
+.unit{
+    font-size:0.4rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:rgba(222,241,255,1);
+    margin-top: 0.8rem;
+    margin-bottom: 0.6rem;
+}
+.barDivs1{
+    /* border: 1px solid red; */
+}
+.barDivs2{
+    /* border: 1px solid green; */
+}
+.popbarDivs1{
+    /* border: 1px solid red; */
+}
+.popbarDivs2{
+    /* border: 1px solid green; */
+}
+/* 右侧tab切换 */
+.right-tabs{
+    /* border: 1px solid red; */
+    position: absolute;
+    right: 1rem;
+    top: 0;
+}
+.right-tabs .nav {
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 0.75rem;
+}
+
+.right-tabs .nav a {
+    display: block;
+    color: #fff;
+    width: 4.5rem;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    background: url("../asset/images/index/tab.png") no-repeat center center/cover;
+    font-size: 0.45rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.right-tabs .nav .active {
+    background-image: url("../asset/images/index/tabyes.png");
+}
+a {
+    color: #ffffff;
+    text-decoration: none;
+}

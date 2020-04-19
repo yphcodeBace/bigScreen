@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>经营管理情况分析</title>
+    <link rel="stylesheet" type="text/css" href="./css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <link rel="stylesheet" type="text/css" href="./css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/businessCase.css" />
+</head>
+<style>
+    body {
+        height: 100%;
+        background: url("./img/img_new/bg.png") no-repeat center;
+        background-size: cover;
+    }
+
+    .header .nav a {
+        display: inline-block;
+    }
+</style>
+
+<body>
+    <div class="contoiner">
+        <div class="header">
+            <img src="./asset/images/index/header.png" />
+            <div class="nav flex">
+                <a href="./index.html">企业管理看板</a>
+                <a href="./taxKanban.html">企业税收看板</a>
+                <a href="./businessCase.html" class="active">经营情况看板</a>
+            </div>
+        </div>
+        <div class="business">
+            <div class="left box">
+                <div class="top_left"></div>
+                <div class="top_right"></div>
+                <div class="bot_left"></div>
+                <div class="bot_right"></div>
+                <div class="box_title">
+                    <h1>本年度全社会固定资产累积情况</h1><em>单位：亿元</em>
+                </div>
+                <div class="fixed_assets">
+                    <h2 class="h2_title">累积固定资产<span>93.4</span></h2>
+                </div>
+                <div class="flex_block">
+                    <div class="flex_g">
+                        <div id="checkChart_pie" style="height: 4.5rem;"></div>
+                        <h1 class="h2_title">考核目标完成</h1>
+                    </div>
+                    <div class="flex_g">
+                        <div id="workChart_pie" style="height: 4.5rem;"></div>
+                        <h1 class="h2_title">工作目标完成</h1>
+                    </div>
+                </div>
+                <div class="assets">
+                    <h1>固定资产分布情况</h1>
+                    <div class="assets_item">
+                        <h1>服务业(商贸)</h1>
+                        <div class="ass_item">
+                            <p>固定资产金额<span>81</span></p>
+                            <p>考核目标完成<span>103.5%</span></p>
+                        </div>
+                        <h1>房地产业(住宅)</h1>
+                        <div class="ass_item">
+                            <p>固定资产金额<span>88</span></p>
+                            <p>考核目标完成<span>103.5%</span></p>
+                        </div>
+                        <h1>基础建设</h1>
+                        <div class="ass_item">
+                            <p>固定资产金额<span>36</span></p>
+                            <p>考核目标完成<span>103.5%</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="box">
+                    <div class="box_title">
+                        <h1>累积销售额（亿元）</h1><em>单位：亿元</em>
+                    </div>
+                    <div class="flex_block" style="height: 6.4rem;">
+                        <div class="flex_g">
+                            <div id="checkChart_sale_pie" style="height: 85%;"></div>
+                            <h1 class="h2_title">总累计销售额<span class="span_sale">21.22</span></h1>
+                        </div>
+                        <div class="flex_g">
+                            <div class="sale_item">
+                                <span>餐饮</span>
+                                <p>累计销售额：2.12</p>
+                                <p>考核目标完成：85.7%</p>
+                            </div>
+                            <div class="sale_item">
+                                <span>零售</span>
+                                <p>累计销售额：2.12</p>
+                                <p>考核目标完成：85.7%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top_left"></div>
+                    <div class="top_right"></div>
+                    <div class="bot_left"></div>
+                    <div class="bot_right"></div>
+                </div>
+                <div class="box">
+                    <div class="box_title">
+                        <h1>各楼宇商业运行情况</h1><em>单位：万元</em>
+                    </div>
+                    <div id="businessChart_bar" style="height: calc(66vh - 6.5rem)"></div>
+                    <div class="top_left"></div>
+                    <div class="top_right"></div>
+                    <div class="bot_left"></div>
+                    <div class="bot_right"></div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="box">
+                    <div class="box_title">
+                        <h1>企业销售额排行</h1><em>单位：万元</em>
+                    </div>
+                    <div class="scrollBox" style="height: 6.4rem;">
+                        <div class="head">
+                            <span class="item sort"><b>排名</b></span>
+                            <span class="item title"><b>企业名称</b></span>
+                            <span class="item"><b>本年度累积销售额</b></span>
+                            <span class="item"><b>餐饮</b></span>
+                            <span class="item"><b>社零</b></span>
+                        </div>
+                        <ul class="scroll-div">
+                            <li>
+                                <span class="item sort"><em class="num1"></em></span>
+                                <span class="item title">威马汽车</span>
+                                <span class="item">270081</span>
+                                <span class="item">-</span>
+                                <span class="item">5450</span>
+                            </li>
+                            <li>
+                                <span class="item sort"><em class="num2"></em></span>
+                                <span class="item title">国展洲际酒店</span>
+                                <span class="item">21987</span>
+                                <span class="item">9803</span>
+                                <span class="item">-</span>
+                            </li>
+                            <li>
+                                <span class="item sort"><em class="num3"></em></span>
+                                <span class="item title">新徐绿地铂瑞</span>
+                                <span class="item">14992</span>
+                                <span class="item">8212</span>
+                                <span class="item">-</span>
+                            </li>
+                            <li>
+                                <span class="item sort">4</span>
+                                <span class="item title">新诸绿地铂骊</span>
+                                <span class="item">8993</span>
+                                <span class="item">2052</span>
+                                <span class="item">-</span>
+                            </li>
+                            <li>
+                                <span class="item sort">5</span>
+                                <span class="item title">上海瑞善氨纶</span>
+                                <span class="item">7666</span>
+                                <span class="item">-</span>
+                                <span class="item">2300</span>
+                            </li>
+                            <li>
+                                <span class="item sort">6</span>
+                                <span class="item title">融和电科</span>
+                                <span class="item">5234</span>
+                                <span class="item">-</span>
+                                <span class="item">3451</span>
+                            </li>
+                            <li>
+                                <span class="item sort">7</span>
+                                <span class="item title">特步儿童用品</span>
+                                <span class="item">3423</span>
+                                <span class="item">-</span>
+                                <span class="item">3000</span>
+                            </li>
+                            <li>
+                                <span class="item sort">8</span>
+                                <span class="item title">特步置业</span>
+                                <span class="item">2300</span>
+                                <span class="item">-</span>
+                                <span class="item">899</span>
+                            </li>
+                            <li>
+                                <span class="item sort">9</span>
+                                <span class="item title">骏博房地产</span>
+                                <span class="item">990</span>
+                                <span class="item">-</span>
+                                <span class="item">-</span>
+                            </li>
+                            <li>
+                                <span class="item sort">10</span>
+                                <span class="item title">中建八局元航</span>
+                                <span class="item">650</span>
+                                <span class="item">-</span>
+                                <span class="item">-</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="top_left"></div>
+                    <div class="top_right"></div>
+                    <div class="bot_left"></div>
+                    <div class="bot_right"></div>
+                </div>
+                <div class="box">
+                    <div class="box_title">
+                        <h1>本年度合同外资累积完成情况</h1><em class="more">更多</em>
+                    </div>
+                    <div style="height: calc(66vh - 6.5rem)">
+                        <div class="agree">
+                            <div class="agree_text">
+                                <span
+                                    class="big"><b>6341.00</b></span><span><b>25.35%</b></span><span><b>14.7%</b></span>
+                            </div>
+                            <div class="agree_text">
+                                <span>累积合同外资（万美元）</span>
+                                <span>考核目标完成</span>
+                                <span>工作目标完成</span>
+                            </div>
+                            <div class="line_bg02"></div>
+                            <div class="agree_text">
+                                <span class="big"><b
+                                        style="color: #FFF100">1873.40</b></span><span><b>25.35%</b></span><span><b>14.7%</b></span>
+                            </div>
+                            <div class="agree_text">
+                                <span>实到外资（万美元）</span><span></span><span></span>
+                            </div>
+                        </div>
+                        <div id="chart_line" style="height: calc(66vh - 10.5rem)"></div>
+                    </div>
+                    <div class="top_left"></div>
+                    <div class="top_right"></div>
+                    <div class="bot_left"></div>
+                    <div class="bot_right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="moreCharts">
+        <div class="moreContent">
+            <div class="swiper-container swiper_more">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <h1 class="swiper_title">本年度合同外资分析(按类型)</h1>
+                        <p class="swiper_subTitle">单位：万美元</p>
+                        <div id="chartPie_type" style="height: 100%;"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <h1 class="swiper_title">本年度合同外资分析(按方式)</h1>
+                        <p class="swiper_subTitle">单位：万美元</p>
+                        <div id="chartPie_mode" style="height: 100%;"></div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/template-web.js"></script>
+    <script type="text/javascript" src="./js/swiper.min.js"></script>
+    <script type="text/javascript" src="./js/echarts.min4.5.js"></script>
+    <script type="text/javascript" src="./js/layer.js"></script>
+    <script type="text/javascript" src="./js/businessCase.js"></script>
+
+</body>
+
+</html>

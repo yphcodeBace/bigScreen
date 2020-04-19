@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>企业税收情况分析</title>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/taxKanban.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <img src="./asset/images/index/header.png" />
+            <div class="nav flex">
+                <a href="./index.html">企业管理看板</a>
+                <a href="./taxKanban.html" class="active">企业税收看板</a>
+                <a href="./businessCase.html">经营情况看板</a>
+            </div>
+        </div>
+        <!-- 上 -->
+        <div class="topCharts">
+            <!-- 1 -->
+            <div class="chart">
+                <div style="font-size:0.5rem;
+                font-family:PingFang SC;
+                font-weight:bold;
+                color:rgba(222,241,255,1);">商务区三大税收管理主体分析（含结转压库）</div>
+                <div class="swqss-div">
+                    <div>
+                        <div class="title-top">47.82%</div>
+                        <div class="title-bm">创业公司目标任务完成</div>
+                    </div>
+                    <div>
+                        <div class="title-top">109.41%</div>
+                        <div class="title-bm">企业服务中心目标任务完成</div>
+                    </div>
+                    <div>
+                        <div class="title-top">75.83%</div>
+                        <div class="title-bm">北斗基地目标任务完成</div>
+                    </div>
+                </div>
+                <div id="swqssglOption" style="height: 9rem;"></div>
+            </div>
+            <div class="chart">
+                <div class="ssjeDiv">
+                    <div style="font-size:0.5rem;font-family:PingFang SC;font-weight:bold;color:rgba(222,241,255,1);">
+                        税收金额变化趋势</div>
+                    <div style="font-size:0.4rem;font-family:PingFang SC;font-weight:500;color:rgba(255,255,255,1);">
+                        <span class="active ndOryd">年度</span>
+                        <span class="ndOryd">月度</span>
+                    </div>
+                </div>
+                <div id="chart1" style="height: 9.5rem;margin: 0.3rem 0;"></div>
+                <div class="barDiv">
+                    <div class="barDiv-title">
+                        <div style="font-size:0.45rem;
+                        font-family:PingFang SC;
+                        font-weight:bold;
+                        color:rgba(222,241,255,1);">本年度考核目标完成</div>
+                        <div style="font-size:0.6rem;
+                        font-family:PingFang SC;
+                        font-weight:bold;
+                        color:rgba(255,176,64,1);">85.7%</div>
+                    </div>
+                    <div class="progressBar">
+                        <div id="bar"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="chart scroll-chart">
+                <div class="scroll-chart-top">
+                    <div style="font-size: 0.5rem;color:rgba(222,241,255,1);">重点企业税收完成情况（含压库）</div>
+                    <div style="font-size: 0.4rem;color:rgba(222,241,255,1);">单位：万元</div>
+                </div>
+                <ul id="template-box">
+                    <script id="tableData" type="text/html">
+                        <li style="font-weight:bold;color:#01FFFC;font-size:0.45rem;">
+                            <span>企业名称</span>
+                            <span>2018年税收（万元）</span>
+                            <span>2019年税收（万元）</span>
+                            <span>同比</span>
+                            <span>占园区比例</span>
+                        </li>
+                        <div class="scroll-div">
+                            {{each data item i}}
+                                <li>
+                                    <span>{{item.name || '-'}}</span>
+                                    <span>{{item.zlyb || '-'}}</span>
+                                    <span>{{item.zlyj || '-'}}</span>
+                                    <span>{{item.YoY || '-'}}</span>
+                                    <span>{{item.scale || '-'}}</span>
+                                </li>
+                            {{/each}}
+                        </div>
+                        <li style="font-size:0.45rem;font-family:PingFang SC;font-weight:bold;">
+                            <span style="color:#01FFFC">合计</span>
+                            <span style="color:#FFE221">140360.18</span>
+                            <span style="color:#FFE221">224580.96</span>
+                            <span style="color:#FFE221">60.0%</span>
+                            <span style="color:#FFE221">88.6%</span>
+                        </li>
+                    </script>
+                </ul>
+            </div>
+        </div>
+        <!-- 下 -->
+        <div class="bottomCharts">
+            <div id="chart2" class="chart">
+                <div class="title-div">
+                    <div class="title">三大税收管理主体月度税收增长趋势图</div>
+                    <div class="right-div">
+                        <div class="active gs">创业公司</div>
+                        <div class="gs">企业服务中心</div>
+                        <div class="gs">北斗基地</div>
+                    </div>
+                </div>
+                <div id="top3Chart"></div>
+            </div>
+            <div class="chart">
+                <div class="top">
+                    <div class="title">税收特殊情况通报</div>
+                    <div style="display: flex;">
+                        <span class="label">申报期</span>
+                        <select name="select" id="select">
+                            <option value="0">2019-12</option>
+                            <option value="1">2019-11</option>
+                            <option value="2">2019-10</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="center">
+                    <div>
+                        <div>申报额</div>
+                        <div class="round">1亿</div>
+                    </div>
+                    <div>
+                        <div>入库金额</div>
+                        <div class="round">0.41亿</div>
+                    </div>
+                    <div>
+                        <div>压库金额</div>
+                        <div class="round">0.59亿</div>
+                    </div>
+                    <div>
+                        <div>退税金额</div>
+                        <div class="round">1.52亿</div>
+                    </div>
+                    <div>
+                        <div>异常企业数</div>
+                        <div class="round">0</div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="title">税收特殊情况明细</div>
+                    <ul>
+                        <li>1、上海中建孚泰置业有限公司增值税退税-11450万元，城建税退税-572.5万元，共退税1.2亿。</li>
+                        <li>2、上海联虹置业有限公司增值税退税804万。</li>
+                        <li>3、上海博万兰韵投资有限公司增值税退税431万。</li>
+                        <li>4、上海华测导航技术股份有限公司增值税退税383万。</li>
+                        <li>5、上海前泓置业有限公司增值税退税373万。</li>
+                        <li>6、上海兴万置业有限公司增值税退税340万。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./taxOptions/option1.js"></script>
+    <script src="./taxOptions/yueduOption1.js"></script>
+    <script src="./taxOptions/top3ChartOption.js"></script>
+    <script src="./taxOptions/swqssglOption.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/echarts.min.js"></script>
+    <script type="text/javascript" src="js/template-web.js"></script>
+    <script src="./js/taxKanban.js"></script>
+</body>
+
+</html>

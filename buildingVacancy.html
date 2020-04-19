@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>楼栋空置情况</title>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/buildingVacancy.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="fixedTitle"></div>
+        <a class="navleft flex" href="./index.html">
+            <img src="./emImgs/首页图标.png" alt="">
+            <span style="margin-left: 0.3rem;">首页</span>
+        </a>
+        <!-- <div class="header-right">
+            <img src="./emImgs/GPS.png" alt="">
+            <span>当前楼栋</span>
+            <span id="name"></span>
+        </div> -->
+        <div class="right-tabs">
+            <div class="nav flex">
+                <a href="./em.html">企业产出情况</a>
+                <a href="./taxKanban.html" class="active">楼栋空置情况</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-left">
+                <div class="content-l-t">
+                    <img src="./asset/images/buildingVacancy/building-icon.png" alt="">
+                    <span>虹桥世界中心-</span>
+                    <span class="louNum">D1</span>
+                    <span>栋-</span>
+                    <span class="floorNum">7F</span>
+                </div>
+                <div class="content-l-b">
+                    <div class="building">
+                        <div class="building9"></div>
+                        <div class="building8"></div>
+                        <div class="building7"></div>
+                        <div class="building6"></div>
+                        <div class="building5"></div>
+                        <div class="building4"></div>
+                        <div class="building3"></div>
+                        <div class="building2"></div>
+                        <div class="building1"></div>
+                    </div>
+                    <div class="floor">
+                        <div>9F</div>
+                        <div>8F</div>
+                        <div>7F</div>
+                        <div>6F</div>
+                        <div>5F</div>
+                        <div>4F</div>
+                        <div>3F</div>
+                        <div>2F</div>
+                        <div>1F</div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-right">
+                <div class="box_top">
+                    <div class="user_case">
+                        <div class="box_title"><h1>使用情况</h1></div>
+                        <div id="template-box">
+                            <script type="text/html" id="user_case_data">
+                                {{each data item i}}
+                                <div class="tabItems">
+                                    <div class="boxs">
+                                        <div>
+                                            <div class="box-top">使用中(间)</div>
+                                            <div class="box-b"><span>{{item.syz}}</span></div>
+                                        </div>
+                                        <div>
+                                            <div class="box-top">空置房(间)</div>
+                                            <div class="box-b"><span>{{item.kzf}}</span></div>
+                                        </div>
+                                        <div>
+                                            <div class="box-top">入住率</div>
+                                            <div class="box-b"><span>{{item.rzl}}</span></div>
+                                        </div>
+                                    </div>
+                                    <ul class="case_info">
+                                        <li>入驻企业(家)：<span>{{item.rzqy}}</span></li>
+                                        <li>办公面积(平方米)：<span>{{item.bgmj}}</span></li>
+                                        <li>入住员工：<span>{{item.rzyg}}</span></li>
+                                        <li>租赁面积(平方米)：<span>{{item.zlmj}}</span></li>
+                                        <li>建筑面积(平方米)：<span>{{item.jzmj}}</span></li>
+                                    </ul>
+                                </div>
+                                {{/each}}
+                            </script>
+                        </div>
+                    </div>
+                    <div class="butler_box">
+                        <div class="box_title"><h1>管家信息</h1></div>
+                        <div class="butler_photo"><img src="./asset/images/buildingVacancy/butler_photo.jpg" /></div>
+                        <div class="butler_info">
+                            <p>姓名：张天天</p>
+                            <p>电话：13912345678</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box_bot">
+                    <div class="box_title"><h1>空置房情况分析</h1></div>
+                    <div id="vacantRoom_chart" style="height: 8.5rem"></div>
+                </div>
+            </div>
+            <!-- 弹框 -->
+            <div id="moreCharts">
+                <div class="moreContent">
+                    <div class="swiper-container swiper_more">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <h1 class="swiper_title"><span class="title_floor">7</span>楼使用情况</h1>
+                                <div class="swiper_content">
+                                    <div class="lenged-div"></div>
+                                    <div class="shoes-div"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/building.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/echarts.min.js"></script>
+    <script type="text/javascript" src="js/template-web.js"></script>
+    <script type="text/javascript" src="./js/swiper.min.js"></script>
+    <script type="text/javascript" src="./js/layer.js"></script>
+    <script src="./js/buildingVacancy.js"></script>
+</body>
+
+</html>
